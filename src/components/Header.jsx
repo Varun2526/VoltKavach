@@ -44,7 +44,7 @@ export function Header({ activePage, onNavigate, onOpenUrjaSakhi }) {
           <div>
             <div className="flex items-center gap-2">
               <span className="font-semibold text-sm tracking-tight text-[#E5E7EB]">
-                TrafoSaathi
+                VoltKavach
               </span>
               <span className="text-[10px] font-mono uppercase tracking-wider px-1.5 py-0.5 rounded-[4px] bg-[#101827] text-[#94A3B8] border border-[#1D2939]">
                 DISCOM v2.4

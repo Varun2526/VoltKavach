@@ -1,4 +1,4 @@
-// TrafoSaathi Savings & Settlement Ledger
+// VoltKavach Savings & Settlement Ledger
 // Measures financial, reliability, and asset-preservation value created by targeted DT intervention
 // PROTOTYPE / SIMULATION BENCHMARK DATA
 
@@ -58,7 +58,7 @@ export const simulationResults = {
   },
   fullLadder: {
     code: "S3",
-    name: "Full TrafoSaathi Ladder",
+    name: "Full VoltKavach Ladder",
     description: "Continuous IEC 60076-7 thermal modeling + Shared Battery + AC shifting + SMS nudges + rotated power floor.",
     overloadHours: "0.00 hrs (0 min)",
     peakHotspot: "109°C",

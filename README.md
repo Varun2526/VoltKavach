@@ -1,4 +1,4 @@
-# VoltKavach (TrafoSaathi) ⚡🛡️
+# VoltKavach ⚡🛡️
 ### DISCOM Transformer Reliability & Flexibility Decision Layer
 
 > **Real-time decision intelligence for distribution utilities (DISCOMs) to forecast thermal hotspot stress on neighbourhood distribution transformers, orchestrate community batteries (BESS), and dispatch least-intrusive flexibility before irreversible thermal degradation occurs.**
@@ -9,7 +9,7 @@
 
 Indian and global distribution transformers (DTs) face extreme thermal overloading during evening peak windows (18:00 – 23:00) driven by rising ambient temperatures, air-conditioning surge loads, and electric vehicle adoption. Conventional demand-response operates at a macro feeder level without granular knowledge of which specific transformer is overheating.
 
-**VoltKavach (TrafoSaathi)** bridges this critical gap by acting as an operational control-room decision layer for DISCOM grid dispatchers.
+**VoltKavach** bridges this critical gap by acting as an operational control-room decision layer for DISCOM grid dispatchers.
 
 ```
 FORECAST → TRANSFORMER RISK → THERMAL HOTSPOT MODEL → ACTION LADDER OPTIMISER → DISPATCH INTERVENTION → EXTENDED ASSET LIFETIME
@@ -26,7 +26,7 @@ FORECAST → TRANSFORMER RISK → THERMAL HOTSPOT MODEL → ACTION LADDER OPTIMI
 
 ### 2. 🔥 Physics-Based Thermal Heat Modelling (DT-1042 Deep Dive)
 - Deterministic simulation of top-oil and winding hotspot temperatures based on IEC 60076-7 / IEEE C57.91 standards.
-- Visual comparative simulation: **"WITHOUT TrafoSaathi"** (hotspot reaches 126°C, causing 18.4x accelerated ageing) vs **"WITH TrafoSaathi"** (stabilized at 104°C).
+- Visual comparative simulation: **"WITHOUT VoltKavach"** (hotspot reaches 126°C, causing 18.4x accelerated ageing) vs **"WITH VoltKavach"** (stabilized at 104°C).
 
 ### 3. 🪜 Least-Intrusive-First Action Ladder
 Automated optimization ladder executing peak clipping in sequential order:
@@ -41,7 +41,7 @@ Automated optimization ladder executing peak clipping in sequential order:
 - Automatic **Medical Exemption Whitelisting** protecting life-support and sensitive medical equipment.
 
 ### 5. 💰 Savings & Settlement Matrix (S0–S3 Scenarios)
-- Detailed economic comparison across S0 (Business As Usual), S1 (Blind BESS), S2 (Traditional DR), and S3 (TrafoSaathi Intelligent Decision Layer).
+- Detailed economic comparison across S0 (Business As Usual), S1 (Blind BESS), S2 (Traditional DR), and S3 (VoltKavach Intelligent Decision Layer).
 - Verifiable Capex deferral ledger (Rs. 18.5 Lakh transformer replacement deferred) and avoided peak power purchase costs.
 
 ### 6. 📱 Urja Sakhi Community Field Steward Portal

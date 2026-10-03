@@ -1,4 +1,4 @@
-// TrafoSaathi Central Mock Data
+// VoltKavach Central Mock Data
 // Deterministic telemetry, thermal modeling, and forecast data for 30 distribution transformers
 
 export const DISCOM_INFO = {
@@ -160,8 +160,8 @@ export const DT1042_TIMESERIES = [
     time: "20:00",
     loadBaseline: 258,
     loadWithTrafo: 206,
-    hotspotBaseline: 126, // Spikes to 126°C without TrafoSaathi! (Overload 48 min, 8.4x ageing)
-    hotspotWithTrafo: 111, // Stabilized at 111°C with TrafoSaathi (0 min overload, 1.1x ageing)
+    hotspotBaseline: 126, // Spikes to 126°C without VoltKavach! (Overload 48 min, 8.4x ageing)
+    hotspotWithTrafo: 111, // Stabilized at 111°C with VoltKavach (0 min overload, 1.1x ageing)
     ambientTemp: 40.5,
     solarPvKw: 0,
     batteryDischargeKw: 32,

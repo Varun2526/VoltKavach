@@ -41,7 +41,7 @@ export function TransformerDetail({
   approvalTime: extTime,
   onApproveDispatch: extOnApprove
 }) {
-  const [withTrafoSaathi, setWithTrafoSaathi] = useState(true);
+  const [withVoltKavach, setWithVoltKavach] = useState(true);
   const [localApproved, setLocalApproved] = useState(false);
   const [localTime, setLocalTime] = useState(null);
 
@@ -63,8 +63,8 @@ export function TransformerDetail({
   const CustomChartTooltip = ({ active, payload, label }) => {
     if (active && payload && payload.length) {
       const data = payload[0].payload;
-      const loadVal = withTrafoSaathi ? data.loadWithTrafo : data.loadBaseline;
-      const hotspotVal = withTrafoSaathi ? data.hotspotWithTrafo : data.hotspotBaseline;
+      const loadVal = withVoltKavach ? data.loadWithTrafo : data.loadBaseline;
+      const hotspotVal = withVoltKavach ? data.hotspotWithTrafo : data.hotspotBaseline;
       const riskLevel = hotspotVal >= 120 ? 'CRITICAL' : hotspotVal >= 110 ? 'HIGH' : 'NORMAL';
 
       return (
@@ -186,28 +186,28 @@ export function TransformerDetail({
           </div>
         </div>
 
-        {/* WITHOUT / WITH TRAFOSAATHI TOGGLE */}
+        {/* WITHOUT / WITH VOLTKAVACH TOGGLE */}
         <div className="flex flex-col items-end gap-1 shrink-0">
           <div className="flex p-1 bg-[#0B1220] rounded-[6px] border border-[#1D2939] text-xs font-sans">
             <button
-              onClick={() => setWithTrafoSaathi(false)}
+              onClick={() => setWithVoltKavach(false)}
               className={`px-3 py-1.5 rounded-[4px] font-medium transition-all ${
-                !withTrafoSaathi
+                !withVoltKavach
                   ? 'bg-[#131D2D] text-[#CBD5E1] border border-[#263449]'
                   : 'text-[#718096] hover:text-[#CBD5E1]'
               }`}
             >
-              WITHOUT TRAFOSAATHI
+              WITHOUT VOLTKAVACH
             </button>
             <button
-              onClick={() => setWithTrafoSaathi(true)}
+              onClick={() => setWithVoltKavach(true)}
               className={`px-3 py-1.5 rounded-[4px] font-medium transition-all ${
-                withTrafoSaathi
+                withVoltKavach
                   ? 'bg-[#147D8C] text-[#E6FFFB]'
                   : 'text-[#718096] hover:text-[#CBD5E1]'
               }`}
             >
-              WITH TRAFOSAATHI
+              WITH VOLTKAVACH
             </button>
           </div>
         </div>
@@ -220,12 +220,12 @@ export function TransformerDetail({
             Peak Hotspot
           </div>
           <div className={`text-2xl font-mono font-semibold mt-1 ${
-            !withTrafoSaathi ? 'text-[#D9534F]' : 'text-[#CBD5E1]'
+            !withVoltKavach ? 'text-[#D9534F]' : 'text-[#CBD5E1]'
           }`}>
-            {!withTrafoSaathi ? '126°C' : '111°C'}
+            {!withVoltKavach ? '126°C' : '111°C'}
           </div>
           <div className="text-[10px] text-[#94A3B8] mt-1 flex justify-between">
-            <span>{!withTrafoSaathi ? 'Unmitigated crest' : '−15°C stabilized'}</span>
+            <span>{!withVoltKavach ? 'Unmitigated crest' : '−15°C stabilized'}</span>
             <span className="px-1.5 py-0.5 rounded-[4px] bg-[#131D2D] border border-[#263449] text-[#D99A2B] text-[9px] font-mono">
               SIMULATION PREVIEW
             </span>
@@ -237,12 +237,12 @@ export function TransformerDetail({
             Overload Duration
           </div>
           <div className={`text-2xl font-mono font-semibold mt-1 ${
-            !withTrafoSaathi ? 'text-[#D9534F]' : 'text-[#CBD5E1]'
+            !withVoltKavach ? 'text-[#D9534F]' : 'text-[#CBD5E1]'
           }`}>
-            {!withTrafoSaathi ? '48 min' : '0 min'}
+            {!withVoltKavach ? '48 min' : '0 min'}
           </div>
           <div className="text-[10px] text-[#94A3B8] mt-1 flex justify-between">
-            <span>{!withTrafoSaathi ? '19:15 – 20:45' : 'Zero trip risk'}</span>
+            <span>{!withVoltKavach ? '19:15 – 20:45' : 'Zero trip risk'}</span>
             <span className="px-1.5 py-0.5 rounded-[4px] bg-[#131D2D] border border-[#263449] text-[#D99A2B] text-[9px] font-mono">
               SIMULATION PREVIEW
             </span>
@@ -254,12 +254,12 @@ export function TransformerDetail({
             Ageing Multiplier
           </div>
           <div className={`text-2xl font-mono font-semibold mt-1 ${
-            !withTrafoSaathi ? 'text-[#D9534F]' : 'text-[#CBD5E1]'
+            !withVoltKavach ? 'text-[#D9534F]' : 'text-[#CBD5E1]'
           }`}>
-            {!withTrafoSaathi ? '8.4×' : '1.1×'}
+            {!withVoltKavach ? '8.4×' : '1.1×'}
           </div>
           <div className="text-[10px] text-[#94A3B8] mt-1 flex justify-between">
-            <span>{!withTrafoSaathi ? 'Severe life loss' : 'Normal lifetime'}</span>
+            <span>{!withVoltKavach ? 'Severe life loss' : 'Normal lifetime'}</span>
             <span className="px-1.5 py-0.5 rounded-[4px] bg-[#131D2D] border border-[#263449] text-[#D99A2B] text-[9px] font-mono">
               SIMULATION PREVIEW
             </span>
@@ -382,7 +382,7 @@ export function TransformerDetail({
               />
 
               {/* Shaded intervention region after dispatch begins */}
-              {withTrafoSaathi && (
+              {withVoltKavach && (
                 <ReferenceArea
                   x1="18:45"
                   x2="21:15"
@@ -394,7 +394,7 @@ export function TransformerDetail({
               )}
 
               {/* Unmitigated curves when WITHOUT is selected */}
-              {!withTrafoSaathi ? (
+              {!withVoltKavach ? (
                 <>
                   <Area
                     yAxisId="left"
@@ -501,7 +501,7 @@ export function TransformerDetail({
 
           <div className="p-2.5 rounded-[6px] bg-[#0B1220] border border-[#1D2939] text-[11px] text-[#94A3B8] leading-relaxed">
             <span className="font-medium text-[#CBD5E1]">Note: </span>
-            TrafoSaathi is modelling thermal stress, not simply instantaneous electrical load. The thermal time constant delays winding heat dissipation after sunset.
+            VoltKavach is modelling thermal stress, not simply instantaneous electrical load. The thermal time constant delays winding heat dissipation after sunset.
           </div>
         </div>
 
@@ -509,7 +509,7 @@ export function TransformerDetail({
         <div className="lg:col-span-5 p-4 rounded-[6px] bg-[#101827] border border-[#1D2939] space-y-4">
           <div className="flex items-center justify-between pb-2 border-b border-[#1D2939]">
             <div className="text-xs font-semibold text-[#E5E7EB] uppercase tracking-wider">
-              TRAFOSAATHI RECOMMENDATION
+              VOLTKAVACH RECOMMENDATION
             </div>
             <span className="px-2 py-0.5 rounded-[4px] bg-[#2A1517] text-[#D9534F] border border-[#5C2023] text-[10px] font-mono font-medium">
               Risk: HIGH

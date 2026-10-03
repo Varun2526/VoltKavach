@@ -1,4 +1,4 @@
-// TrafoSaathi Fairness & Equity Engine Data
+// VoltKavach Fairness & Equity Engine Data
 // Prevents repeated inconvenience to the same households through transparent rotation and capped exposure
 
 export const FAIRNESS_SUMMARY = {

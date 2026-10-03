@@ -294,7 +294,7 @@ export function DispatchPlan({
         <div className="lg:col-span-5 p-4 rounded-[6px] bg-[#101827] border border-[#1D2939] space-y-4">
           <div className="flex items-center justify-between pb-2 border-b border-[#1D2939]">
             <div className="text-xs font-semibold text-[#E5E7EB] uppercase tracking-wider">
-              TRAFOSAATHI RECOMMENDATION
+              VOLTKAVACH RECOMMENDATION
             </div>
             <span className="px-2 py-0.5 rounded-[4px] bg-[#2A1517] text-[#D9534F] border border-[#5C2023] text-[10px] font-mono font-medium">
               Risk: HIGH

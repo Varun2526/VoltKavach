@@ -1,4 +1,4 @@
-// TrafoSaathi Urja Sakhi Operator Data (Ward 14 Local Operations)
+// VoltKavach Urja Sakhi Operator Data (Ward 14 Local Operations)
 // High-trust local community guardianship of distribution assets
 
 export const URJA_SAKHI_PROFILE = {
